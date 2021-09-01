@@ -7,4 +7,4 @@
 
 ## Raspberry
 
-![](resource/rpi-hardware.png)
+![](resource/rpi_hardware.png)
