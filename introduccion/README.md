@@ -1,6 +1,6 @@
 # Introducción
 
-- Setup Raspberry, OpenCV & Tensorflow
+- Setup Raspberry, SSH, Python3
 - GPIO Program & Hardware interface
 
 ---
@@ -70,3 +70,116 @@ network={
 - Luego encender el RPI y volver a ejecutar el comando 'arp -a' para identificar cual ip se asigno a el RPI
 
   ![](resource/arp02.png)
+
+---
+
+## Conexión SSH
+
+- Abrir terminal en la computadora y ejecutar el comando 'ssh pi@ip-del-raspberry'
+- Escribir 'yes' para continuar con la conexión
+- Luego ingresamos el password, por defecto es 'raspberry'
+
+  ![](resource/arp02.png)
+
+---
+
+## Comandos Básicos Linux
+
+- Update & Upgrade software
+  ```
+  sudo apt-get update
+  sudo apt-get upgrade
+  ```
+- Revisar interfaz de red
+  ```
+  ifconfig
+  ```
+- Trabajando con archivos del sistema
+
+  - Lista de contenido en la carpeta actual
+    ```
+    ls
+    ```
+  - Listado con detalles
+    ```
+    ls -lAh
+    ```
+  - Cambiar o mover de carpeta
+    ```
+    cd Downloads
+    ```
+  - Ir a la carpeta home
+    ```
+    cd ~
+    ```
+  - Revisar la ruta de la carpeta actual
+    ```
+    pwd
+    ```
+  - Crear una carpeta
+
+    ```
+    mkdir Test
+    ```
+
+  - Crear un archivo
+    ```
+    touch myfile.txt
+    ```
+  - Copiar un archivo
+    ```
+    cp myfile.txt Test
+    ```
+  - Eliminar un archivo
+    ```
+    rm Test/myfile.txt
+    ```
+  - Mover un archivo
+    ```
+    mv myfile.txt Test
+    ```
+  - Eliminar una carpeta vacía
+    ```
+    rmdir Test
+    ```
+  - Eliminar una carpeta no vacía
+    ```
+    rm -rf Test
+    ```
+
+---
+
+## Setup GPIO (General Purpose Input/Output)
+
+- Ejecutar los siguientes comandos en el terminal del RPI
+
+```
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install python3
+sudo apt-get install python3-pip
+```
+
+- Instalar y configurar I2C, esto permite al RPI comunicarse con motores, sensores ...
+
+```
+sudo apt-get install -y python-smbus
+sudo apt-get install -y i2c-tools
+sudo raspi-config
+```
+
+- Luego seleccionar 'Interfacing Options" -> "I2C" -> 'Yes' -> 'OK' -> 'FINISH'
+- Instalar libreria RPI.GPIO
+
+```
+sudo pip3 install RPI.GPIO
+sudo reboot
+```
+
+---
+
+## GPIO PROGRAM
+
+```
+python3 blinktest.py
+```
