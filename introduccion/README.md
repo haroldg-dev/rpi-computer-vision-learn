@@ -43,8 +43,11 @@
 - Retirar la SD de la computadora
 - Insertar SD a la computadora
 - Habilitar SSH
+
   - Dentro de el SD agregar el fichero ssh, sin extensión.
+
     ![](resource/rpi_ssh.jpg)
+
 - Configurar Wifi - Dentro de la SD agregar el fichero 'wpa_supplicant.conf' con los siguientes datos:
 
 ```
@@ -61,6 +64,9 @@ network={
 
 - Antes de prender el RPI, abrir el terminal en la computadora conectada a la red configurada
 - Ejecutar el comando 'arp -a' para visualizar los dispositivos conectados a la red
+
   ![](resource/arp01.png)
+
 - Luego encender el RPI y volver a ejecutar el comando 'arp -a' para identificar cual ip se asigno a el RPI
+
   ![](resource/arp02.png)
