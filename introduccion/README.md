@@ -44,12 +44,14 @@
   - Dentro de el SD agregar el fichero ssh, sin extensión.
   - ![](resource/rpi_ssh.jpg)
 - Configurar Wifi - Dentro de la SD agregar el fichero 'wpa_supplicant.conf' con los siguientes datos:
-- ````ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-     update_config=1
-     country=ES
-  network={
-  ssid="nombre-de-tu-wifi"
-  psk="password-de-tu-wifi"
-  key_mgmt=WPA-PSK
-  }```
-  ````
+
+```
+    ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+    update_config=1
+    country=ES
+    network={
+    ssid="nombre-de-tu-wifi"
+    psk="password-de-tu-wifi"
+    key_mgmt=WPA-PSK
+    }
+```
