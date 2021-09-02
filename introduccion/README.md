@@ -79,7 +79,7 @@ network={
 - Escribir 'yes' para continuar con la conexión
 - Luego ingresamos el password, por defecto es 'raspberry'
 
-  ![](resource/arp02.png)
+  ![](resource/rpi_ssh.png)
 
 ---
 
